@@ -951,7 +951,7 @@ function Dialog(editorUi, elt, w, h, modal, closable, onClose, noScroll, transpa
 /**
  *
  */
-Dialog.backdropColor = 'white';
+Dialog.backdropColor = '#2a2a2a';
 
 /**
  *

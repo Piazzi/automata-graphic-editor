@@ -25,7 +25,7 @@ Format.prototype.showCloseButton = true;
 /**
  * Background color for inactive tabs.
  */
-Format.prototype.inactiveTabBackgroundColor = '#f1f3f4';
+Format.prototype.inactiveTabBackgroundColor = 'black'; //#f1f3f4
 
 /**
  * Background color for inactive tabs.
