@@ -50,7 +50,6 @@
 }
 
 /* AUTOMATA GRAPHIC EDITOR ./ */
-
 .geEditor {
 	font-family:Helvetica,Arial,sans-serif;
 	font-size:14px;
@@ -243,7 +242,7 @@
 	margin: 0px;
 	outline: 0;
 	padding: 0px;
-	cursor: pointer;
+	cursor: pointer;		
 }
 .geColorBtn:hover {
 	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
@@ -297,7 +296,7 @@
 }
 .geMenubarContainer .geItem:hover {
 	background: #eee;
-	border-radius:2px;
+	border-radius:2px;	
 }
 .geMenubarContainer .geItem:active {
 	background: #F8C382;
@@ -363,7 +362,7 @@
 }
 .geToolbarContainer .geButton {
 	float:left;
-	/*width:20px;*/
+	width:20px;
 	height:20px;
 	padding:0px 2px 4px 2px;
 	margin:2px;
@@ -441,7 +440,7 @@ div.mxWindow .geButton {
 }
 .geTitle img {
 	opacity:0.5;
-	_filter:alpha(opacity=50);
+	_filter:alpha(opacity=50);	
 }
 .geTitle img:hover {
 	opacity:1;
@@ -539,7 +538,6 @@ div.mxWindow .geButton {
 	box-shadow:0px 0px 2px 2px #d5d5d5;
 	_filter:progid:DXImageTransform.Microsoft.DropShadow(OffX=2, OffY=2, Color='#d5d5d5', Positive='true');
 	z-index: 2;
-    border-radius: 10px;
 }
 .geTransDialog {
 	position:absolute;
@@ -832,7 +830,7 @@ html td.mxWindowTitle {
  	padding:4px;
 }
 .gePropHeader, .gePropRow {
-	border: 1px solid #e9e9e9;
+	border: 1px solid #e9e9e9;	
 }
 .gePropRowDark {
 	border: 1px solid #4472C4;
@@ -1056,7 +1054,7 @@ html td.mxWindowTitle {
 	padding-left: 9px;
 	box-sizing: border-box;
 	overflow-y: auto;
-	overflow-x: hidden;
+	overflow-x: hidden; 
 }
 .geTempDlgNewDiagramCatFooter {
 	width: 100%;
@@ -1141,7 +1139,7 @@ html td.mxWindowTitle {
 .geTempDlgDiagramsListBtns {
 	float: right;
 	margin-top: -9px;
-}
+}		
 .geTempDlgRadioBtn {
 	box-sizing: border-box;
 	border: 1px solid #CCCCCC;
@@ -1359,7 +1357,7 @@ html td.mxWindowTitle {
 	border: 1px solid whiteSmoke;
 	height: 100%;
 	margin-bottom: 10px;
-	overflow: auto;
+	overflow: auto;	
 }
 
 .geCommentsToolbar {
@@ -1380,7 +1378,7 @@ html td.mxWindowTitle {
 	overflow: auto;
 	left: 0px;
 	right: 0px;
-	top: 0px;
+	top: 0px;	
 }
 
 .geCommentContainer {
@@ -1487,12 +1485,12 @@ html td.mxWindowTitle {
 .geCommentAction:before {
 	content: "\2022";
 	padding: 5px;
-}
+} 
 
 .geCommentAction:first-child:before {
 	content: "";
 	padding: 0;
-}
+} 
 
 .geCommentActionLnk {
 	cursor: pointer;
@@ -1516,7 +1514,7 @@ html td.mxWindowTitle {
 	right: 5px;
 }
 
-.geAspectDlgListItem
+.geAspectDlgListItem 
 {
 	width : 120px;
 	height : 120px;
@@ -1532,7 +1530,7 @@ html td.mxWindowTitle {
 	border: 3px solid #c5c5c5;
 }
 
-.geAspectDlgListItemSelected
+.geAspectDlgListItemSelected 
 {
 	border: 3px solid #3b73af;
 }
