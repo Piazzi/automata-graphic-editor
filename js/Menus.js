@@ -20,7 +20,7 @@ Menus = function(editorUi)
 /**
  * Sets the default font family.
  */
-Menus.prototype.defaultFont = 'Helvetica';
+Menus.prototype.defaultFont = 'Tahoma';
 
 /**
  * Sets the default font size.
@@ -500,7 +500,7 @@ Menus.prototype.init = function()
 	})));
 	this.put('extras', new Menu(mxUtils.bind(this, function(menu, parent)
 	{
-		this.addMenuItems(menu, ['copyConnect', 'collapseExpand', '-']);
+		this.addMenuItems(menu, ['copyConnect', 'collapseExpand', '-', 'editDiagram']);
 	})));
 	
 	this.put('help', new Menu(mxUtils.bind(this, function(menu, parent)
