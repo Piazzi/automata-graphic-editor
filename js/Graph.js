@@ -129,7 +129,7 @@ mxGraphView.prototype.gridSteps = 4;
 mxGraphView.prototype.minGridSize = 4;
 
 // UrlParams is null in embed mode
-mxGraphView.prototype.defaultGridColor = '#d0d0d0';
+mxGraphView.prototype.defaultGridColor = '#6E6E6E';  //d0d0d0
 mxGraphView.prototype.gridColor = mxGraphView.prototype.defaultGridColor;
 
 //Units
@@ -1394,12 +1394,12 @@ Graph.prototype.lightbox = false;
 /**
  *
  */
-Graph.prototype.defaultPageBackgroundColor = '#ffffff';
+Graph.prototype.defaultPageBackgroundColor = '#2A2A2A ';
 
 /**
  *
  */
-Graph.prototype.defaultPageBorderColor = '#ffffff';
+Graph.prototype.defaultPageBorderColor = '#505759';
 
 /**
  * Specifies the size of the size for "tiles" to be used for a graph with

@@ -5834,7 +5834,7 @@ DiagramFormatPanel.prototype.addGridOption = function(container)
 			
 			if (graph.isGridEnabled())
 			{
-				graph.view.gridColor = '#e0e0e0';
+				graph.view.gridColor = '#6E6E6E';
 			}
 			
 			ui.fireEvent(new mxEventObject('gridEnabledChanged'));

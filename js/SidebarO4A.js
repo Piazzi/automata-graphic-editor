@@ -957,7 +957,7 @@ Sidebar.prototype.insertSearchHint = function(div, searchTerm, count, page, resu
 		this.createEdgeTemplateEntry('html=1;verticalAlign=bottom;endArrow=block;curved=1;Transition', 80, 0, 'Name', 'Transition', null, 'uml sequence message call invoke dispatch'),
 		this.createVertexTemplateEntry('shape=umlBoundary;whiteSpace=wrap;html=1;InitialState', 100, 80, 'Name', 'Initial State', null, null, 'uml boundary object'),
 		this.createVertexTemplateEntry('ellipse;whiteSpace=wrap;html=1;aspect=fixed;State;', 80, 80, 'Name', 'State', null, null, 'circle'),
-		this.createVertexTemplateEntry('ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;FinalState', 80, 80, '', 'Final State', null, null, 'double circle'),
+		this.createVertexTemplateEntry('ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;FinalState', 80, 80, 'Name', 'Final State', null, null, 'double circle'),
 
    ];
 
@@ -1912,7 +1912,7 @@ Sidebar.prototype.createThumb = function(cells, width, height, parent, title, sh
 
 		var div = document.createElement('div');
 		div.style.fontSize = this.sidebarTitleSize + 'px';
-		div.style.color = '#303030';
+		div.style.color = '#f0f0f0'; //#303030 for white mode
 		div.style.textAlign = 'center';
 		div.style.whiteSpace = 'nowrap';
 
