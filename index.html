@@ -61,17 +61,21 @@
 <body class="geEditor">
 
 	<!--  Console -->
-	<div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 230px; max-width: fit-content; top: 0; position: fixed; right: 0; z-index: 100;  background-color: #2a2a2a  !important;">
+	<div id="console" class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" >
 		<a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
 		  <span style="text-align: center !important; color: #cccccc !important;" class="fs-5 fw-semibold"><i class="bi bi-cpu"></i> Compiler</span>
 		</a>
 		<div class="list-group list-group-flush border-bottom scrollarea" style="overflow-y: auto !important;">
-		  <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+		  <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight bg-dark" aria-current="true">
 			<div class="d-flex w-100 align-items-center justify-content-between">
-			  <strong class="mb-1">List group item heading</strong>
-			  <small>Wed</small>
+			  <strong class="mb-1">Info about the current automaton</strong>
+			  <small><i class="bi bi-info-circle"></i> </small>
 			</div>
-			<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+			<div class="col-10 mb-1 small"><i class="bi bi-circle"></i> States: <span>X</span></div>
+			<div class="col-10 mb-1 small"><i class="bi bi-arrow-right"></i> Transitions: <span>X</span></div>
+			<div class="col-10 mb-1 small"><i class="bi bi-caret-right-square"></i> Initial States: <span>X</span></div>
+			<div class="col-10 mb-1 small"><span style="font-style: italic; font-weight: bold;">F</span> Final States: <span>X</span></div>
+
 		  </a>
 		  <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
 			<div class="d-flex w-100 align-items-center justify-content-between">
@@ -80,15 +84,6 @@
 			</div>
 			<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
 		  </a>
-		  <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-			<div class="d-flex w-100 align-items-center justify-content-between">
-			  <strong class="mb-1">List group item heading</strong>
-			  <small class="text-muted">Mon</small>
-			</div>
-			<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-		  </a>
-	
-		  
 		</div>
 	  </div>
 
