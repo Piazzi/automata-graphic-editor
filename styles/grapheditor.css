@@ -1,22 +1,6 @@
 /* AUTOMATA GRAPHIC EDITOR  */
 
-/* Error Console */
-#warnings-console {
-	z-index: 213;
-	margin-bottom: 2px !important;
-	margin-top: 1px !important;
-	border-color: #00a65a !important;
-	position: fixed;
-	bottom: 0;
-	width: 700px;
-    right: inherit;
-    cursor: row-resize;
-    left: 50%;
-    bottom: 20px;
-    margin-left: -350px;
-    bottom: 20px;
-	border-radius: 15px;
-}
+
 
 .toolbar-icon {
 	margin-right: 3px;
@@ -26,14 +10,6 @@
 	font-size: 1em;
     font-weight: initial;
 	cursor: pointer !important;
-
-}
-
-
-#warnings-console-header {
-	background-color: whitesmoke;
-	color: #333;
-	border-radius: 15px;
 
 }
 
@@ -50,6 +26,8 @@
 }
 
 /* AUTOMATA GRAPHIC EDITOR ./ */
+
+
 .geEditor {
 	font-family:Helvetica,Arial,sans-serif;
 	font-size:14px;

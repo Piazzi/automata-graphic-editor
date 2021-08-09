@@ -5,7 +5,10 @@
     <title>Automata Graphic Editor</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- CSS only -->
     <link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<script type="text/javascript">
 		// Parses URL parameters. Supported parameters are:
 		// - lang=xy: Specifies the language of the user interface.
@@ -56,6 +59,40 @@
 	<script type="text/javascript" src="js/Dialogs.js"></script>
 </head>
 <body class="geEditor">
+
+	<!--  Console -->
+	<div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 230px; max-width: fit-content; top: 0; position: fixed; right: 0; z-index: 100;  background-color: #2a2a2a  !important;">
+		<a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+		  <span style="text-align: center !important; color: #cccccc !important;" class="fs-5 fw-semibold"><i class="bi bi-cpu"></i> Compiler</span>
+		</a>
+		<div class="list-group list-group-flush border-bottom scrollarea" style="overflow-y: auto !important;">
+		  <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
+			<div class="d-flex w-100 align-items-center justify-content-between">
+			  <strong class="mb-1">List group item heading</strong>
+			  <small>Wed</small>
+			</div>
+			<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+		  </a>
+		  <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+			<div class="d-flex w-100 align-items-center justify-content-between">
+			  <strong class="mb-1">List group item heading</strong>
+			  <small class="text-muted">Tues</small>
+			</div>
+			<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+		  </a>
+		  <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+			<div class="d-flex w-100 align-items-center justify-content-between">
+			  <strong class="mb-1">List group item heading</strong>
+			  <small class="text-muted">Mon</small>
+			</div>
+			<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+		  </a>
+	
+		  
+		</div>
+	  </div>
+
+
 	<script type="text/javascript">
 		// Extends EditorUi to update I/O action states based on availability of backend
 		(function()
@@ -106,5 +143,6 @@
 			});
 		})();
 	</script>
+
 </body>
 </html>
