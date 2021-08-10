@@ -1162,7 +1162,7 @@ EditorUi.prototype.init = function()
 
 
 			
-			//compileCells(editor.graph.getModel());
+			compileAutomaton();
 
 		}));
 

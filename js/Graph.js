@@ -1466,7 +1466,7 @@ Graph.prototype.baseUrl = (urlParams['base'] != null) ?
 /**
  * Specifies if the label should be edited after an insert.
  */
-Graph.prototype.editAfterInsert = true;
+Graph.prototype.editAfterInsert = false;
 
 /**
  * Defines the built-in properties to be ignored in tooltips.

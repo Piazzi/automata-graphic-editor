@@ -57,6 +57,7 @@
 	<script type="text/javascript" src="js/Menus.js"></script>
 	<script type="text/javascript" src="js/Toolbar.js"></script>
 	<script type="text/javascript" src="js/Dialogs.js"></script>
+	<script type="text/javascript" src="js/Compiler.js"></script>
 </head>
 <body class="geEditor">
 
@@ -68,31 +69,33 @@
 		</a>
 
 		<div class="list-group list-group-flush  scrollarea" style="overflow-y: auto !important; font-size: 17px;">
-		  <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight bg-dark" aria-current="true" style="border-color: #2a2a2a; background-color: #2a2a2a !important;">
-			<div class="justify-content-between" style="text-align: center;"> 
-				<strong  class="mb-1"><i class="bi bi-bounding-box-circles"></i> Current automaton</strong>
-			</div>
-			<br>
-			<div class="col-10 mb-1 small"><i class="bi bi-info-circle"></i> Type: <span id="type">X</span></div>
-			<div class="col-10 mb-1 small"><i class="bi bi-circle"></i> States: <span id="states">X</span></div>
-			<div class="col-10 mb-1 small"><i class="bi bi-arrow-right"></i> Transitions: <span id="transitions">X</span></div>
-			<div class="col-10 mb-1 small"><i class="bi bi-caret-right-square"></i> Initial States: <span id="initial-states">X</span></div>
-			<div class="col-10 mb-1 small"><span style="font-style: italic; font-weight: bold;">F</span> Final States: <span id="final-states">X</span></div>
-			<br>
-			<div class="justify-content-between" style="text-align: center;">
-				<strong  class="mb-1"><i class="bi bi-bug"></i> Errors</strong>
-			</div>
-		  </a>
 
-		  <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" style="background-color: #2a2a2a;
-		  color: white; border-radius: 15px !important; margin-top: 10px; margin-bottom: 10px; border-width: 1px; border-color: #dc3545;">
-			<div class="d-flex w-100 align-items-center justify-content-between">
-			  <strong class="mb-1">List group item heading</strong>
-			  <i style="color: #dc3545; font-size: larger;" class="bi bi-exclamation-triangle"></i>
-			</div>
-			<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-		  </a>
+			<a href="#" class="list-group-item list-group-item-action active py-3 lh-tight bg-dark" aria-current="true" style="border-color: #2a2a2a; background-color: #2a2a2a !important;">
+				<div class="justify-content-between" style="text-align: center;"> 
+					<strong  class="mb-1"><i class="bi bi-bounding-box-circles"></i> Current automaton</strong>
+				</div>
+				<br>
+				<div class="col-10 mb-1 small"><i class="bi bi-info-circle"></i> Type: <span id="type">X</span></div>
+				<div class="col-10 mb-1 small"><i class="bi bi-circle"></i> States: <span id="states">X</span></div>
+				<div class="col-10 mb-1 small"><i class="bi bi-arrow-right"></i> Transitions: <span id="transitions">X</span></div>
+				<div class="col-10 mb-1 small"><i class="bi bi-caret-right-square"></i> Initial States: <span id="initial-states">X</span></div>
+				<div class="col-10 mb-1 small"><span style="font-style: italic; font-weight: bold;">F</span> Final States: <span id="final-states">X</span></div>
+				<br>
+				<div class="justify-content-between" style="text-align: center;">
+					<strong  class="mb-1"><i class="bi bi-bug"></i> <span id="errors-count">X</span> Errors</strong>
+				</div>
+			</a>
 
+			<div id="messages">
+				<a href="#" class="list-group-item list-group-item-action py-3 lh-tight error-message">
+				<div class="d-flex w-100 align-items-center justify-content-between">
+					<strong class="mb-1">List group item heading</strong>
+					<i style="color: #dc3545; font-size: larger;" class="bi bi-exclamation-triangle"></i>
+				</div>
+				<div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+				</a>
+			</div>
+			
 		</div>
 	  </div>
 

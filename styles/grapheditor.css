@@ -11,6 +11,17 @@
 	auto !important;
     height: 600px !important;
 }
+
+.error-message {
+	background-color: #2a2a2a;
+	color: white; 
+	border-radius: 15px !important; 
+	margin-top: 10px; 
+	margin-bottom: 10px;
+    border-width: 1px; 
+	border-color: #dc3545;
+	border-top-width: 1px !important;
+}
 /* AUTOMATA GRAPHIC EDITOR ./ */
 
 
