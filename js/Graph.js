@@ -3490,20 +3490,7 @@ Graph.prototype.getTooltipForCell = function(cell)
 			{
 				if (mxUtils.indexOf(ignored, attrs[i].nodeName) < 0 && attrs[i].nodeValue.length > 0)
 				{
-					// find the classes names 
-					if(attrs[i].nodeName in autoCompleteProperties && attrs[i].nodeValue != "")
-					{
-						let cellsNames = [];
-						let ids = attrs[i].nodeValue.split(',');
-						console.log(ids);
-						for (let i = 0; i < ids.length; i++) {
-							if(ids[i] != "" && ids[i] != "null" && cellExists(ids[i]))
-								cellsNames.push(getCellById(ids[i], null).getAttribute('label'));
-						}
-						temp.push({name: attrs[i].nodeName, value: [...new Set(cellsNames)]});
-					}
-					else
-						temp.push({name: attrs[i].nodeName, value: attrs[i].nodeValue});
+					temp.push({name: attrs[i].nodeName, value: attrs[i].nodeValue});
 				}
 			}
 
@@ -3515,11 +3502,7 @@ Graph.prototype.getTooltipForCell = function(cell)
 			{
 				if (temp[i].name != 'link' || !this.isCustomLink(temp[i].value))
 				{
-					// colors the attributes label and id
-					if(temp[i].name == 'label' || temp[i].name == 'id')
-						tip += ((temp[i].name != 'link') ? '<b style="color:green">' + temp[i].name + ':</b> ' : '') +	mxUtils.htmlEntities(temp[i].value) + '\n';
-					else
-						tip += ((temp[i].name != 'link') ? '<b>' + temp[i].name + ':</b> ' : '') +	mxUtils.htmlEntities(temp[i].value) + '\n';
+					tip += ((temp[i].name != 'link') ? '<b>' + temp[i].name + ':</b> ' : '') +	mxUtils.htmlEntities(temp[i].value) + '\n';
 				}
 			}
 
