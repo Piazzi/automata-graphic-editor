@@ -12,12 +12,13 @@ let cells = [],
  * made in the drawing
  */
 function compileAutomaton() {
+
   cells = editor.graph.getModel().cells;
   states = [];
   initialStates = [];
   finalStates = [];
   transitions = [];
-  type = "";
+  type = "Deterministic finite automaton";
   errorCount = 0;
 
   removePreviousMessages();
@@ -56,6 +57,20 @@ function compileState(cell) {
         initialStates.push(cell.value);
    
     states.push(cell.value);
+
+    if(cell.edges != null)
+      for (let i = 0; i < cell.edges.length; i++) 
+        for (let j = 0; j < cell.edges.length; j++)
+            if(cell.edges[i].id != cell.edges[j].id && cell.edges[i].value == cell.edges[j].value) 
+              type = 'Nondeterministic finite automaton';
+      
+      
+     
+    // Adicionar erro caso o automato não tenha estado final
+
+    // Adicionar erro caso o automato não tenha estado inicial
+
+    // Adicionar erro caso exista algum estado inalcançável 
 
 }
 
