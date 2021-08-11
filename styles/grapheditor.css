@@ -22,6 +22,12 @@
 	border-color: #dc3545;
 	border-top-width: 1px !important;
 }
+
+#type, #states, #final-states, #initial-states, #transitions {
+	display: block;
+	color: #cccccc;
+	font-style: italic;
+}
 /* AUTOMATA GRAPHIC EDITOR ./ */
 
 

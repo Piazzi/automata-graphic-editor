@@ -124,5 +124,8 @@ function updateCurrentAutomatonInfo() {
       message = document.createElement("div");
       message.innerHTML = '<a href="#" class="list-group-item list-group-item-action py-3 lh-tight error-message" style="border-color: #198754;"><div style="text-align: center;" class="w-100 align-items-center justify-content-between"><strong class="mb-1">None <i style="color: #198754; font-size: larger;" class="bi bi-check"></i></strong></div></a>';
       document.getElementById("messages").appendChild(message);
+      document.getElementById('errors').style.color = '#198754';
     }
+  else
+    document.getElementById('errors').style.color = '#dc3545';
 }
