@@ -61,7 +61,10 @@ function compileState(cell) {
     if(cell.edges != null)
       for (let i = 0; i < cell.edges.length; i++) 
         for (let j = 0; j < cell.edges.length; j++)
-            if(cell.edges[i].id != cell.edges[j].id && cell.edges[i].value == cell.edges[j].value) 
+            if(cell.edges[i].id != cell.edges[j].id && 
+              cell.edges[i].value == cell.edges[j].value && 
+              cell.edges[i].source == cell.id && 
+              cell.edges[j].source == cell.id) 
               type = 'Nondeterministic finite automaton';
       
       
