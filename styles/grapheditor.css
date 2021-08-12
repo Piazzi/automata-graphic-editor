@@ -16,17 +16,28 @@
 	background-color: #2a2a2a;
 	color: white; 
 	border-radius: 15px !important; 
-	margin-top: 10px; 
-	margin-bottom: 10px;
+	margin-bottom: 8px;
     border-width: 1px; 
 	border-color: #dc3545;
 	border-top-width: 1px !important;
+	margin: 8px;
+    width: auto;
 }
 
 #type, #states, #final-states, #initial-states, #transitions {
 	display: block;
 	color: #cccccc;
 	font-style: italic;
+}
+
+.geDialog {
+	width: auto !important;
+	height: auto !important;
+}
+
+.geToolbarContainer .geButton {
+	width: 30px !important;
+	height: 30px !important;
 }
 /* AUTOMATA GRAPHIC EDITOR ./ */
 

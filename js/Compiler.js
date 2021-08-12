@@ -173,11 +173,7 @@ function nextState(state, index) {
 	if(state.style.includes('FinalState'))
 		return true;
 	else if(state.edges != null){
-			for (let i = 0; i < state.edges.length; i++) 
-				if(state.edges[i].value == symbols[index])
-					return nextState(state.edges[i], index++) ;	
-				else
-					continue;	
+			return nextState(state.edges[0], index++) ;	
 	}
 	else
 		return false;
