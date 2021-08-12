@@ -53,30 +53,43 @@ function removePreviousMessages() {
  */
 function compileState(cell) {
 
-	if (cell.style.includes('FinalState'))
+    if (cell.style.includes('FinalState'))
 		finalStates.push(cell.value);
 	if (cell.style.includes('InitialState')) {
 		initialNodes.push(cell);
 		initialStates.push(cell.value);
 	} 
-	states.push(cell.value);
+   
+    states.push(cell.value);
 
-	if (cell.edges != null)
-		for (let i = 0; i < cell.edges.length; i++)
-			for (let j = 0; j < cell.edges.length; j++)
-				if (cell.edges[i].id != cell.edges[j].id &&
-					cell.edges[i].value == cell.edges[j].value &&
-					cell.edges[i].source == cell.id &&
-					cell.edges[j].source == cell.id)
-					type = 'Nondeterministic finite automaton';
+    if(cell.edges != null)
+      for (let i = 0; i < cell.edges.length; i++) 
+        for (let j = 0; j < cell.edges.length; j++)
+            if(cell.edges[i].id != cell.edges[j].id && 
+              cell.edges[i].value == cell.edges[j].value && 
+              cell.edges[i].source == cell.id && 
+              cell.edges[j].source == cell.id) 
+              type = 'Nondeterministic finite automaton';
+      
+      
+              
+    // Adicionar erro caso o automato não tenha estado final
+    if(finalStates == null) {
+      createErrorMessage('Automaton has no final state!', finalStates);
+      errorCount++;
+    }
 
+    // Adicionar erro caso o automato não tenha estado inicial
+    if(initialStates == null) {
+      createErrorMessage('Automaton has no initial state!', initialStates);
+      errorCount++;
+    }
 
-
-	// Adicionar erro caso o automato não tenha estado final
-
-	// Adicionar erro caso o automato não tenha estado inicial
-
-	// Adicionar erro caso exista algum estado inalcançável 
+    // Adicionar erro caso exista algum estado inalcançável 
+    if(states.target == null && states.source == null) {
+      createErrorMessage('Unreachable state without automaton!', states.value);
+      errorCount++;
+    }
 
 }
 
