@@ -9,7 +9,57 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
-	<script type="text/javascript">
+</head>
+<body class="geEditor">
+
+	<!--  Console -->
+	<div id="console" class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" >
+
+		<a class=" align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom" style="text-align: center !important;border-bottom: 2px solid #2a2a2a!important;">
+		  <span style=" color: #cccccc !important;" class="fs-5 fw-semibold"><i class="bi bi-cpu"></i> Compiler</span>
+		</a>
+
+		<div class="list-group list-group-flush  scrollarea" style="overflow-y: auto !important; font-size: 17px;">
+
+			<a href="#" class="list-group-item list-group-item-action active py-3 lh-tight bg-dark" aria-current="true" style=" border-color: #2a2a2a; background-color: #2a2a2a !important; text-align: center;">
+				<div class="justify-content-between" style="text-align: center;"> 
+					<strong  class="mb-1"><i class="bi bi-bounding-box-circles"></i> Current automaton</strong>
+				</div>
+				<br>
+				<div class=" mb-1 small"><i class="bi bi-info-circle"></i> Type:<span id="type">None</span></div>
+				<div class=" mb-1 small"><i class="bi bi-circle"></i> States: <span id="states">None</span></div>
+				<div class=" mb-1 small"><i class="bi bi-arrow-right"></i> Transitions: <span id="transitions">None</span></div>
+				<div class=" mb-1 small"><i class="bi bi-caret-right-square"></i> Initial States: <span id="initial-states">None</span></div>
+				<div class=" mb-1 small"><span style="font-style: italic; font-weight: bold;">F</span> Final States: <span id="final-states">None</span></div>
+				<br>
+				<div class="justify-content-between" style="text-align: center;">
+					<form class="row g-3 needs-validation" novalidate>
+						<div class="col-md-12">
+						  <label for="validationCustom01" class="form-label"><i class="bi bi-journal-text"></i><strong> Input</strong> </label>
+						  <input placeholder="Enter a string" type="text" class="form-control" id="string-validation"  required>
+						  <div class="valid-feedback">
+							The automata accepts this string!
+						  </div>
+						  <div class="invalid-feedback">
+							The automata doesn't accepts this string!
+						  </div>
+						</div>
+					</form>
+				</div>
+				<br>
+				<div class="justify-content-between" style="text-align: center;">
+					<strong id="errors" class="mb-1"><i class="bi bi-bug"></i> <span id="errors-count">0</span> Errors</strong>
+				</div>
+			</a>
+
+			<div id="messages">
+				
+			</div>
+			
+		</div>
+	  </div>
+
+	  <script type="text/javascript">
 		// Parses URL parameters. Supported parameters are:
 		// - lang=xy: Specifies the language of the user interface.
 		// - touch=1: Enables a touch-style user interface.
@@ -58,42 +108,6 @@
 	<script type="text/javascript" src="js/Toolbar.js"></script>
 	<script type="text/javascript" src="js/Dialogs.js"></script>
 	<script type="text/javascript" src="js/Compiler.js"></script>
-</head>
-<body class="geEditor">
-
-	<!--  Console -->
-	<div id="console" class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" >
-
-		<a class=" align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom" style="text-align: center !important;border-bottom: 2px solid #2a2a2a!important;">
-		  <span style=" color: #cccccc !important;" class="fs-5 fw-semibold"><i class="bi bi-cpu"></i> Compiler</span>
-		</a>
-
-		<div class="list-group list-group-flush  scrollarea" style="overflow-y: auto !important; font-size: 17px;">
-
-			<a href="#" class="list-group-item list-group-item-action active py-3 lh-tight bg-dark" aria-current="true" style=" border-color: #2a2a2a; background-color: #2a2a2a !important; text-align: center;">
-				<div class="justify-content-between" style="text-align: center;"> 
-					<strong  class="mb-1"><i class="bi bi-bounding-box-circles"></i> Current automaton</strong>
-				</div>
-				<br>
-				<div class=" mb-1 small"><i class="bi bi-info-circle"></i> Type:<span id="type">None</span></div>
-				<div class=" mb-1 small"><i class="bi bi-circle"></i> States: <span id="states">None</span></div>
-				<div class=" mb-1 small"><i class="bi bi-arrow-right"></i> Transitions: <span id="transitions">None</span></div>
-				<div class=" mb-1 small"><i class="bi bi-caret-right-square"></i> Initial States: <span id="initial-states">None</span></div>
-				<div class=" mb-1 small"><span style="font-style: italic; font-weight: bold;">F</span> Final States: <span id="final-states">None</span></div>
-				<br>
-				<div class="justify-content-between" style="text-align: center;">
-					<strong id="errors" class="mb-1"><i class="bi bi-bug"></i> <span id="errors-count">0</span> Errors</strong>
-				</div>
-			</a>
-
-			<div id="messages">
-				
-			</div>
-			
-		</div>
-	  </div>
-
-
 	<script type="text/javascript">
 		// Extends EditorUi to update I/O action states based on availability of backend
 		(function()

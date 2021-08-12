@@ -202,7 +202,7 @@ Sidebar.prototype.thumbWidth = 100;
 /**
  * Specifies the height of the thumbnails. Default is 36
  */
-Sidebar.prototype.thumbHeight = 100;
+Sidebar.prototype.thumbHeight = 80;
 
 /**
  * Specifies the padding for the thumbnails. Default is 3.
@@ -953,12 +953,40 @@ Sidebar.prototype.insertSearchHint = function(div, searchTerm, count, page, resu
  */
  Sidebar.prototype.addAutomatonPalette = function(expand)
  {
+	var sb = this;
 	var fns = [
 		this.createEdgeTemplateEntry('html=1;verticalAlign=bottom;endArrow=block;curved=1;Transition', 80, 0, 'Name', 'Transition', null, 'uml sequence message call invoke dispatch'),
-		this.createVertexTemplateEntry('shape=umlBoundary;whiteSpace=wrap;html=1;InitialState', 100, 80, 'Name', 'Initial State', null, null, 'uml boundary object'),
+		//this.createVertexTemplateEntry('shape=umlBoundary;whiteSpace=wrap;html=1;InitialState', 100, 80, 'Name', 'Initial State', null, null, 'uml boundary object'),
+		this.addEntry('activity', function()
+			{
+		    	var cell1 = new mxCell('', new mxGeometry(40, 0, 80, 80), 'ellipse;html=1;InitialState');
+		    	cell1.vertex = true;
+				cell1.value = 'Name';
+				var edge1 = new mxCell('', new mxGeometry(0, 0, 0, 0), 'endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;');
+				edge1.geometry.setTerminalPoint(new mxPoint(0, 40), true);
+				edge1.geometry.relative = true;
+				edge1.edge = true;
+				cell1.insertEdge(edge1, false);
+				
+				return sb.createEdgeTemplateFromCells([cell1, edge1], 80, 30, 'Initial State');
+			}),
 		this.createVertexTemplateEntry('ellipse;whiteSpace=wrap;html=1;aspect=fixed;State;', 80, 80, 'Name', 'State', null, null, 'circle'),
-		this.createVertexTemplateEntry('ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;FinalState', 80, 80, 'Name', 'Final State', null, null, 'double circle'),
+		this.createVertexTemplateEntry('ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;FinalState;', 80, 80, 'Name', 'Final State', null, null, 'double circle'),
+		this.addEntry('activity', function()
+			{
+		    	var cell1 = new mxCell('', new mxGeometry(40, 0, 80, 80), 'ellipse;shape=doubleEllipse;html=1;InitialState;FinalState;');
+		    	cell1.vertex = true;
+				cell1.value = 'Name';
 
+				var edge1 = new mxCell('', new mxGeometry(0, 0, 0, 0), 'endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;');
+				edge1.geometry.setTerminalPoint(new mxPoint(0, 40), true);
+				edge1.geometry.relative = true;
+				edge1.edge = true;
+				cell1.insertEdge(edge1, false);
+
+				
+				return sb.createEdgeTemplateFromCells([cell1, edge1], 80, 30, 'Initial/Final State');
+			}),
    ];
 
    this.addPaletteFunctions('Automaton Tab', 'Automaton Tab', (expand != null) ? expand : true, fns);
