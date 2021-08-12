@@ -37,6 +37,17 @@ function compileAutomaton() {
 			continue;
 	}
 	console.log(cells);
+
+	if(finalStates.length == 0) {
+		createErrorMessage('Automaton has no final state!', finalStates);
+		errorCount++;
+	}
+
+	if(initialStates.length == 0) {
+		createErrorMessage('Automaton has no initial state!', initialStates);
+		errorCount++;
+	}
+
 	updateCurrentAutomatonInfo();
 }
 
@@ -71,23 +82,8 @@ function compileState(cell) {
               cell.edges[j].source == cell.id) 
               type = 'Nondeterministic finite automaton';
       
-      
-              
-    // Adicionar erro caso o automato não tenha estado final
-    if(finalStates == null) {
-      createErrorMessage('Automaton has no final state!', finalStates);
-      errorCount++;
-    }
-
-    // Adicionar erro caso o automato não tenha estado inicial
-    if(initialStates == null) {
-      createErrorMessage('Automaton has no initial state!', initialStates);
-      errorCount++;
-    }
-
-    // Adicionar erro caso exista algum estado inalcançável 
-    if(states.target == null && states.source == null) {
-      createErrorMessage('Unreachable state without automaton!', states.value);
+    if(cell.edges == null) {
+      createErrorMessage('Unreachable state', cell.value);
       errorCount++;
     }
 
