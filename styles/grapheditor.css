@@ -9,7 +9,6 @@
 	background-color: #2a2a2a  
 	!important;overflow-y:
 	auto !important;
-    height: 600px !important;
 }
 
 .error-message {
@@ -22,6 +21,7 @@
 	border-top-width: 1px !important;
 	margin: 8px;
     width: auto;
+	
 }
 
 #type, #states, #final-states, #initial-states, #transitions {

@@ -21,7 +21,7 @@
 
 		<div class="list-group list-group-flush  scrollarea" style="overflow-y: auto !important; font-size: 17px;">
 
-			<a href="#" class="list-group-item list-group-item-action active py-3 lh-tight bg-dark" aria-current="true" style=" border-color: #2a2a2a; background-color: #2a2a2a !important; text-align: center;">
+			<a href="#" class="list-group-item list-group-item-action active py-3 lh-tight bg-dark" aria-current="true" style=" border-color: #2a2a2a; background-color: #2a2a2a !important; text-align: center; word-break: break-word">
 				<div class="justify-content-between" style="text-align: center;"> 
 					<strong  class="mb-1" ><i class="bi bi-bounding-box-circles"></i> Current automaton</strong>
 				</div>
@@ -49,12 +49,14 @@
 				</div>
 			</a>
 
-			<div id="messages">
-				
-			</div>
 			
 		</div>
-	  </div>
+		<div id="messages" style="overflow: auto;
+		overflow-y: auto !important;
+		height: 300px;">
+			
+		</div>
+	</div>
 
 	  <script type="text/javascript">
 		// Parses URL parameters. Supported parameters are:
