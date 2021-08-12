@@ -39,12 +39,12 @@ function compileAutomaton() {
 	console.log(cells);
 
 	if(finalStates.length == 0) {
-		createErrorMessage('Automaton has no final state!', finalStates);
+		createErrorMessage('', 'Automaton has no final state!');
 		errorCount++;
 	}
 
 	if(initialStates.length == 0) {
-		createErrorMessage('Automaton has no initial state!', initialStates);
+		createErrorMessage('', 'Automaton has no initial state!');
 		errorCount++;
 	}
 
