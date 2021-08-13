@@ -3,7 +3,7 @@
 <head>
     <title>Graph Editor Help</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="../styles/help.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
 	<div class="content-wrapper" style="min-height: 586px;">
@@ -62,17 +62,24 @@
 								</li>
 							</a>
 							
-							<a href="#colors">
+							<a href="#afd">
 								<li>
 									<font style="vertical-align: inherit;">
-										<font style="vertical-align: inherit;">Cores</font>
+										<font style="vertical-align: inherit;">AFD</font>
 									</font>
 								</li>
 							</a>
-							<a href="#save">
+							<a href="#afn">
 								<li>
 									<font style="vertical-align: inherit;">
-										<font style="vertical-align: inherit;">Salvar</font>
+										<font style="vertical-align: inherit;">AFN</font>
+									</font>
+								</li>
+							</a>
+							<a href="#save-export">
+								<li>
+									<font style="vertical-align: inherit;">
+										<font style="vertical-align: inherit;">Salvar e Exportar</font>
 									</font>
 								</li>
 							</a>
@@ -180,12 +187,203 @@
 						<dd>
 							<font style="vertical-align: inherit;">
 								<font style="vertical-align: inherit;">
-								"É um editor gráfico gratuito capaz de criar, editar e exportar  autômatos..."
+								É um editor gráfico gratuito capaz de criar, editar e exportar autômatos finitos tanto determinísticos (AFD) quanto não determinísticos (AFND).
+								</font>
+							</font>
+						</dd>
+						<dd>
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">
+								Exporte seu autômato para XML ou SVG.
 								</font>
 							</font>
 						</dd>
 					</d1>
 				</div>
+			</div>
+			<h2 id="#conceitos-basicos">
+				<font style="vertical-align: inherit;">
+					<font style="vertical-align: inherit;">Conceitos Básicos</font>
+				</font>
+			</h2>
+			<div id="class" class="box box-solid">
+				<div class="box-header with-border">
+					<i class="fa fa-text-width"></i>
+					<h3 class="box-title">
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Aula</font>
+						</font>
+					</h3>
+				</div>
+				<div class="box-body">
+					<d1>
+						<dd>
+							<font style="vertical-align: inherit;">
+								<font style="vertical-align: inherit;">Em autômatos, temos o círculo que é definido como o estado.</font>
+							</font>
+						</dd>
+						<div class="row">
+							<div class="col-md-6">
+								<img alt="imagem da tela" src="..\images\telaInicial.png">
+							</div>
+							<div class="col-md-6">
+								<ul>
+									<li>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">Ele representa o estado do autômato.</font>
+										</font>
+									</li>
+									<li>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">É possível nomeá-lo clicando duas vezes dentro dele.</font>
+										</font>
+									</li>
+									<li>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">O seu tamanho pode ser modificado passando o mouse sobre o círculo de puxando sua borda.</font>
+										</font>
+									</li>
+									<li>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">As cores do interior e da borda do estado podem ser modificadas.</font>
+										</font>
+									</li>
+									<li>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">Você pode fazer uma captura de tela, indo em file e depois em print ou simplesmente pressionando CTRL + P.</font>
+										</font>
+									</li>
+									<li>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">É possível inserir os estados ou seta no diagrama apenas clicando em seu símbolo.</font>
+										</font>
+									</li>
+									<li>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">Clicar com o botão direito do mouse sobre um estado abrirá um menu com diversas opções.</font>
+										</font>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</d1>
+				</div>
+			</div>
+			<h2 id="#afd">
+				<font style="vertical-align: inherit;">
+					<font style="vertical-align: inherit;">Autômato Finito Determinístico</font>
+				</font>
+			</h2>
+			<div class="box-body">
+				<d1>
+					<dd>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">De maneira informal podemos dizer que o Autômato Finito Determinístico, também conhecido como AFD, é uma máquina computacional abstrata cuja capacidade de memorização consiste de um número finito e pré-definido de estados que ela pode assumir. Seu processamento consiste em decidir, dado um valor de entrada, como deverá proceder a mudança de estado da máquina.</font>
+						</font>
+					</dd>
+					<dd>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">O processamento e os estados de um autômato finito podem ser expressados graficamente por um diagrama denominado diagrama de estados e demonstrado no exemplo a seguir.</font>
+						</font>
+					</dd>
+					<div class="row">
+						<div class="col-md-6">
+							<img alt="imagem da tela" src="..\images\afd.png">
+						</div>
+					</div>
+				</d1>
+			</div>
+			<h2 id="#afn">
+				<font style="vertical-align: inherit;">
+					<font style="vertical-align: inherit;">Autômato Finito Não-Determinístico</font>
+				</font>
+			</h2>
+			<div class="box-body">
+				<d1>
+					<dd>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">A diferença que temos do Autômato Finito Não-Determinístico para o Autômato Finito Determinístico é que no AFN é permitido mais de uma transição a partir do mesmo estado, para estados distintos, em consequência do mesmo evento. Uma palavra é aceita por um AFN se existe pelo menos um caminho alternativo, dentre todos os permitidos pelo autômato, que aceita essa palavra.</font>
+						</font>
+					</dd>
+					<dd>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Abaixo temos o exemplo de um AFN.</font>
+						</font>
+					</dd>
+					<div class="row">
+						<div class="col-md-6">
+							<img alt="imagem da tela" src="..\images\afn.png">
+						</div>
+					</div>
+				</d1>
+			</div>
+			<h2 id="#save-export">
+				<font style="vertical-align: inherit;">
+					<font style="vertical-align: inherit;">Salvar e Exportar</font>
+				</font>
+			</h2>
+			<div class="box-body">
+					<dd>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">É possível salvar os autômatos desenvolvidos em Graphic Editor e acessá-los posteriormente.</font>
+						</font>
+					</dd>
+					<div class="row">
+						<div class="col-md-6">
+							<li>
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Clicando em <em>Salvar</em>, no menu <em>Arquivo</em>, ou pressionando <strong>CTRL + S</strong></font>
+								</font>
+							</li>
+							<li>
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Você pode salvar o seu autômato na pasta de sua preferência e quando quiser pode abrir ele novamente no editor, clicando em <em>Abrir</em>, no menu <em>Arquivo</em></font>
+								</font>
+							</li>
+							<li>
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Também é possível exportar os autômatos nos formatos SVG ou XML. É só clicar no menu <em>Arquivo</em> e depois selecionar a opção <em>Exportar</em>. Vai abrir uma tela para selecionar a opção desejada, assim como no exemplo abaixo.</font>
+								</font>
+							</li>
+						</div>
+					</div>
+						<div class="col-md-6">
+							<img alt="imagem da tela" src="..\images\telaExportar.png">
+						</div>
+			</div>
+			<h2 id="import">
+				<font style="vertical-align: inherit;">
+					<font style="vertical-align: inherit;">Importar</font>
+				</font>
+			</h2>
+			<div class="box-body">
+					<dd>
+						<font style="vertical-align: inherit;">
+							<font style="vertical-align: inherit;">Você também pode importar autômatos que já estão salvos no seu computador para o Automata Graphic Editor.</font>
+						</font>
+					</dd>
+					<div class="row">
+						<div class="col-md-6">
+							<li>
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Clicando em <em>Importar</em>, no menu <em>Arquivo</em></font>
+								</font>
+							</li>
+							<li>
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Uma vez carregado o autômato, é possível editá-lo e salvá-lo novamente em seu computador.</font>
+								</font>
+							</li>
+							<li>
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">Após editar um autômato importado, é possível exportá-lo em algum outro formato diferente do que estava anteriormente. Vale lembrar que os formatos suportados são SVG e XML.</font>
+								</font>
+							</li>
+						</div>
+					</div>
+						<div class="col-md-6">
+							<img alt="imagem da tela" src="..\images\telaImportar.png">
+						</div>
 			</div>
 		</section>
 	</div>
