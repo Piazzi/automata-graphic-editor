@@ -145,7 +145,7 @@ function updateCurrentAutomatonInfo() {
 		document.getElementById('errors').style.color = '#dc3545';
 }
 
-
+/*
 // Check if the string is accepted by the current automata
 const stringInput = document.getElementById('string-validation');
 
@@ -164,11 +164,7 @@ stringInput.addEventListener('change', (event) => {
 	return stringIsInvalid();
 });
 
-/**
- * Gets the next state in the automata given a symbol
- * @param {mxCell} state 
- * @param {int} index 
- */
+
 function nextState(state, index) {
 	if(state.style.includes('FinalState'))
 		return true;
@@ -197,4 +193,4 @@ function stringIsEmpty() {
 	stringInput.classList.remove('is-invalid');
 	stringInput.classList.remove('is-valid');
 	stringInput.setAttribute('style', 'border-color: #505759  !important');
-}
+}*/
