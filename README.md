@@ -6,3 +6,5 @@ First, we aim to build a graph editor for deterministic finite and nondeterminis
 To use the project, download the files and open the index.html file in your browser of choice.
 
 <img src="images/editor.PNG">
+
+To learn how to use the editor, please check our wiki https://github.com/Piazzi/automata-graphic-editor.wiki.git

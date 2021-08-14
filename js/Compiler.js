@@ -82,7 +82,7 @@ function compileState(cell) {
               cell.edges[j].source == cell.id) 
               type = 'Nondeterministic finite automaton';
       
-    if(cell.edges == null || !cell.edges[0].style.includes('Transition')) {
+    if(cell.edges == null || !cell.edges.some(e => e.style.includes('Transition'))) {
       createErrorMessage('Unreachable state', cell.value);
       errorCount++;
     }
