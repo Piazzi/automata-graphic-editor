@@ -305,7 +305,7 @@ var mxClient =
 			
 			link.setAttribute('rel', rel);
 			// ONTO4ALL FIX
-			link.setAttribute('href', '/grapheditor/src/css/common.css');
+			link.setAttribute('href', 'src/css/common.css');
 			link.setAttribute('charset', 'UTF-8');
 			link.setAttribute('type', 'text/css');
 			
@@ -11303,7 +11303,7 @@ mxXmlRequest.prototype.send = function(onload, onerror, timeout, ontimeout)
 			});
 		}
 
-		this.request.open(this.method, this.url, this.async,
+		this.request.open(this.method, 'https://piazzi.github.io/automata-graphic-editor/'+this.url, this.async,
 			this.username, this.password);
 		this.setRequestHeaders(this.request, this.params);
 		
