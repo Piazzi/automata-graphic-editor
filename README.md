@@ -3,7 +3,7 @@
 
 - First, we aim to build a graph editor for deterministic finite and nondeterministic finite automatons that exports the automatons in XML/SVG. With a simple compiler to show the user some errors during the usage.
 
-To use the project, download the files and open the <a href="https://github.com/Piazzi/automata-graphic-editor/blob/main/index.html"> index.html </a> file in your browser of choice.
+To use the project, download the files and open the <a href="https://github.com/Piazzi/automata-graphic-editor/blob/main/index.html"> index.html </a> file in your browser of choice. Or access our <a href="https://piazzi.github.io/automata-graphic-editor/"> Github Pages deploy > </a>
 
 <img src="images/editor.PNG">
 
