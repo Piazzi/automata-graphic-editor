@@ -884,7 +884,7 @@ Actions.prototype.init = function()
 			ext = '_' + mxClient.language;
 		}
 
-		graph.openLink(RESOURCES_PATH + '/help' + ext + '.html');
+		graph.openLink('https://github.com/Piazzi/automata-graphic-editor/wiki/Tutorial');
 	});
 
 	var showingAbout = false;
