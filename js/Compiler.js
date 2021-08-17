@@ -51,7 +51,14 @@ function compileAutomaton() {
 		errorCount++;
 	}
 
+	checkForDuplicatedStates();
+
 	updateCurrentAutomatonInfo();
+}
+
+function checkForDuplicatedStates() {
+	if(states.some((val, i) => states.indexOf(val) !== i))
+		createErrorMessage('', 'Automaton has multiple states with the same name');
 }
 
 /**
@@ -153,7 +160,7 @@ function updateCurrentAutomatonInfo() {
 // Check if the string is accepted by the current automata
 const stringInput = document.getElementById('string-validation');
 
-stringInput.addEventListener('change', (event) => {
+stringInput.addEventListener('keyup', (event) => {
 	// transform string into caracters array
 	symbols = stringInput.value.split('');
 	index = 0;
