@@ -10,6 +10,7 @@
 	!important;overflow-y:
 	auto !important;
 	height: 600px !important;
+	
 }
 
 .error-message {
@@ -24,6 +25,27 @@
     width: auto;
 	font-size: medium;
 	
+}
+
+#word-input {
+	text-align: center; bottom: 0; 
+	right: 0; 
+	z-index: 100; 
+	position: absolute;
+	width: 700px;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -350px;
+    bottom: 20px;
+}
+
+.valid-feedback , .invalid-feedback {
+	font-weight: bolder;
+	background-color: #2a2a2a;
+}
+
+#string-validation {
+	border-radius: 15px;
 }
 
 #type, #states, #final-states, #initial-states, #transitions {

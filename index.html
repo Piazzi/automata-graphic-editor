@@ -30,22 +30,8 @@
 				<div class=" mb-1 small"><i class="bi bi-arrow-right"></i> Transitions: <span id="transitions">None</span></div>
 				<div class=" mb-1 small"><i class="bi bi-caret-right-square"></i> Initial States: <span id="initial-states">None</span></div>
 				<div class=" mb-1 small"><span style="font-style: italic; font-weight: bold;">F</span> Final States: <span id="final-states">None</span></div>
-				<!--
-				<div class="justify-content-between" style="text-align: center; padding-top: 20px;">
-					<form class="row g-3 needs-validation" novalidate>
-						<div class="col-md-12">
-						  <label for="validationCustom01" class="form-label"><i class="bi bi-journal-text"></i><strong> Input</strong> </label>
-						  <input placeholder="Enter a string" type="text" class="form-control" id="string-validation"  required>
-						  <div class="valid-feedback">
-							The automata accepts this string!
-						  </div>
-						  <div class="invalid-feedback">
-							The automata doesn't accepts this string!
-						  </div>
-						</div>
-					</form>
-				</div>
-				-->
+				
+				
 			</a>
 			
 			
@@ -59,8 +45,23 @@
 			
 		</div>
 	</div>
+	
+	<div id="word-input" class="justify-content-between" >
+		<form class="row g-3 needs-validation" novalidate>
+			<div class="col-md-12">
+			  <label for="validationCustom01" class="form-label"><i class="bi bi-journal-text"></i><strong> Input</strong> </label>
+			  <input placeholder="Enter a string, e.g: abaa" type="text" class="form-control" id="string-validation"  required>
+			  <div class="valid-feedback">
+				<span>The automata accepts this string! </span>
+			  </div>
+			  <div class="invalid-feedback">
+				<span>The automata doesn't accepts this string! </span>
+			  </div>
+			</div>
+		</form>
+	</div>
 
-	  <script type="text/javascript">
+	<script type="text/javascript">
 		// Parses URL parameters. Supported parameters are:
 		// - lang=xy: Specifies the language of the user interface.
 		// - touch=1: Enables a touch-style user interface.

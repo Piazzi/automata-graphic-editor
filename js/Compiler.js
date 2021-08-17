@@ -149,7 +149,7 @@ function updateCurrentAutomatonInfo() {
 		document.getElementById('errors').style.color = '#dc3545';
 }
 
-/*
+
 // Check if the string is accepted by the current automata
 const stringInput = document.getElementById('string-validation');
 
@@ -197,4 +197,4 @@ function stringIsEmpty() {
 	stringInput.classList.remove('is-invalid');
 	stringInput.classList.remove('is-valid');
 	stringInput.setAttribute('style', 'border-color: #505759  !important');
-}*/
+}
