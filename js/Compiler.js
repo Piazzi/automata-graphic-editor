@@ -164,6 +164,7 @@ stringInput.addEventListener('keyup', (event) => {
 	// transform string into caracters array
 	symbols = stringInput.value.split('');
 	index = 0;
+	console.log(symbols);
 	let currentState = initialNodes[0];
 	if(symbols.length == 0 )
 		return stringIsEmpty();
@@ -171,10 +172,13 @@ stringInput.addEventListener('keyup', (event) => {
 		for (let i = 0; i < currentState.edges.length; i++) {
 			// If the current state is source of one the transitions connected to him
 			// and the value of the transition equals the current symbol
+			
 			if(currentState.edges[i].source == currentState && symbols[index] == currentState.edges[i].value){
 				currentState = currentState.edges[i].target;
-				index++
+				index++;
+				i = 0;
 			}
+
 			if(currentState.style.includes('FinalState'))
 				return stringIsValid();
 			
