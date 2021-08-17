@@ -8,4 +8,4 @@ To use the project, download the files and open the <a href="https://github.com/
 <img src="images/editor.PNG">
 <img src="images/editor2.PNG">
 
-To learn how to use the editor, please check out our <a href="https://github.com/Piazzi/automata-graphic-editor.wiki.git"> Wiki </a> .
+To learn how to use the editor, please check out our <a href="https://github.com/Piazzi/automata-graphic-editor/wiki/Tutorial"> Wiki </a> .
