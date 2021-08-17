@@ -81,8 +81,8 @@ function compileState(cell) {
         for (let j = 0; j < cell.edges.length; j++)
             if(cell.edges[i].id != cell.edges[j].id && 
               cell.edges[i].value == cell.edges[j].value && 
-              cell.edges[i].source == cell.id && 
-              cell.edges[j].source == cell.id) 
+              cell.edges[i].source == cell && 
+              cell.edges[j].source == cell) 
               type = 'Nondeterministic finite automaton';
       
     if(cell.edges == null || !cell.edges.some(e => e.style.includes('Transition')) && !cell.style.includes('InitialState')) {
