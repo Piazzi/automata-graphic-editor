@@ -157,21 +157,17 @@ stringInput.addEventListener('change', (event) => {
 	// transform string into caracters array
 	symbols = stringInput.value.split('');
 	index = 0;
-	console.log(symbols);
 	let currentState = initialNodes[0];
 	if(symbols.length == 0 )
 		return stringIsEmpty();
 	else if(initialNodes.length == 1 && currentState.edges != null)
 		for (let i = 0; i < currentState.edges.length; i++) {
-			console.log(currentState.value);
-			console.log(symbols[index]);
 			// If the current state is source of one the transitions connected to him
 			// and the value of the transition equals the current symbol
 			if(currentState.edges[i].source == currentState && symbols[index] == currentState.edges[i].value){
 				currentState = currentState.edges[i].target;
 				index++
 			}
-			console.log(currentState);
 			if(currentState.style.includes('FinalState'))
 				return stringIsValid();
 			
@@ -179,29 +175,6 @@ stringInput.addEventListener('change', (event) => {
 
 	return stringIsInvalid();
 });
-
-/**
- * Return the state for the given id
- * @param {int} id 
- * @returns 
- */
-function getStateById(id) {
-	for (let i = 0; i < states.length; i++) 
-		if(states[i].id == id)
-			return states[i];
-}
-
-function nextState(state, index) {
-	if(state.style.includes('FinalState'))
-		return true;
-	else if(state.edges != null){
-			return nextState(state.edges[0], index++) ;	
-	}
-	else
-		return false;
-					
-}
-
 
 function stringIsValid() {
 	stringInput.classList.add('is-valid');
